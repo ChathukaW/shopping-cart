@@ -1,0 +1,172 @@
+body{
+    font-family: sans-serif;
+    background-color:#e3ccb5;
+}
+h1{
+    font-size: 2em;
+    color: white;
+}
+
+#topTitle{
+    font-size: 2em;
+    color: #4d0000;
+}
+
+#mainTitle{
+    font-size: 5em;
+}
+#footerTitle{
+    font-size: 4em;
+    color: #4d0000;
+    float: left;
+}
+
+#lga{
+   background-color:  #cc9966;
+     max-height: 40%;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color:#cc9966;
+}
+
+
+
+.header {
+    background-color: white;
+    color:black;
+    padding: 15px;
+}
+
+
+mainTitle{
+    font-size: 5em;
+    padding: 2em;
+}
+
+
+
+.LargePage{
+    height: 90%;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+
+.dividerPage{
+    height: 50%;
+        background-color:white;
+}
+
+.dividerPage img{
+    padding: 2em;
+    max-height: 80%;
+    float: left;
+   
+}
+
+.dividerPage h1{
+    color:black;
+    
+}
+
+#lg1{
+    background-image: url(../pic/women-936549_960_720.jpg);
+    background-size: cover;
+}
+
+#about {
+    text-shadow: 2px 2px 4px #000000;
+    font-size: 3em;
+     color:white;
+}
+
+#lg2{
+     height: 70%;
+    background-image: url(../pic/july-salsa-recipes-tomato.jpg);
+    background-size: cover; 
+}
+
+#lgc{
+  background-color: #cc7a00;
+     max-height: 40%;  
+    
+}
+
+.button {
+   
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #e68a00;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#aa{ 
+     margin: 15px;
+    width: 300px;
+     border: 2px solid white;
+    background-color: #cc7a00;
+}

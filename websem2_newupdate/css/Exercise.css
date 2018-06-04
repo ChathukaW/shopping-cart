@@ -1,0 +1,102 @@
+body{
+  
+    background-image:url(../pic/background-1747784.jpg);
+}
+
+h1.toptext{
+    font-size: 2em;
+    color: red;
+       font-family: Comic Sans ms;
+    text-align: center;
+}
+
+#A{
+    color:dimgray;
+    font-family: candra;
+    
+}
+
+ul.nav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li.navLi {
+    float: left;
+}
+
+li.navLi a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.navLi a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color:#cc9966;
+}
+
+
+
+
+
+.LargePage{
+    height: 90%;
+    padding: 0;
+    background-size: cover;
+    background-attachment: fixed;
+  
+}
+
+.content{
+    height: 50%;
+       background-image: url(../pic/light-blue-background.jpeg);
+    
+}
+
+.content img{
+    padding: 2em;
+    max-height: 80%;
+    float: left;
+   
+}
+
+.content h1{
+    color:black;
+    
+}
+
+#lg1{
+    background-image: url(../pic/training-828760_1920.jpg);
+    background-size: cover;
+    height: 725px;
+}
+
+
+
+#lgc{
+  background-color: #cc9966;
+     max-height: 40%;  
+}
+
+
+#lga{
+   background-color:  #cc9966;
+     max-height: 30%;
+}
+
+.description{
+    background-color:darkturquoise;
+    color:antiquewhite
+}

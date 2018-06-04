@@ -1,0 +1,82 @@
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color:#cc9966;
+}
+
+
+
+.team{ /* this will aligh the pictures horizontally */
+    display: flex;
+  justify-content: center;
+}
+
+.team_member { /*to show images relatively */
+    position: relative;
+    
+    padding: 10px;
+}
+
+.image { /* setting image properties*/
+  opacity: 1;
+
+  border:1px solid #021a40;
+  transition: .5s ease;
+  backface-visibility: hidden;
+  height: 250px;
+  width: 250px;
+  vertical-align: middle;
+}
+
+.middle { /* setting properties of animation*/
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%)
+}
+
+.team_member:hover .image {
+  opacity: 0.3;
+}
+
+.team_member:hover .middle {
+  opacity: 1;
+}
+
+.text { /* properties of text box which popup  when the mouse pointer comming to top of the iamge*/
+  background-color: #aeb2b2;
+  color: white;
+  font-size: 15px;
+    text-align: center;
+  width:200px;
+    height:50px;
+}

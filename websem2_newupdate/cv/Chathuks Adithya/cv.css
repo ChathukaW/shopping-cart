@@ -1,0 +1,87 @@
+div
+{
+    border-radius: 5px;
+    }
+#header
+{
+
+    height:120px;
+    width: 98%;
+    background-color: #668284;
+    margin-bottom: 10px
+    }
+
+#name {
+    float:left;
+	margin-left: 20px;
+	padding-bottom: 10px;
+	font-size: 16px;
+	font-family: Verdana, sans-serif;
+	color: #ffffff;
+}
+
+table.profile{
+    
+    font-family: monospace;
+}
+
+
+
+
+.content
+{
+    float: left;
+    padding-left:5px;
+   
+    height: auto;
+    width: 99%;
+    background-color: #E3EDD8;
+    }
+
+    
+h3
+{
+    text-decoration: underline;
+    }
+
+#job-responsibilities
+{
+    padding: 1px;
+    }
+.job-title
+{
+    font-weight: bold;
+    }
+
+table.qualification
+{
+    border: 1px dashed black;
+    }
+td
+{
+    padding: 2px;
+    border: 1px solid #E88741;
+    }
+
+#course-name
+{
+    font-weight:bold;
+    }
+
+#company-name
+{
+    height:2px;
+    text-decoration:underline;
+    }
+#job-title
+{
+    height: 5px;
+    }
+.job-duration
+{
+    float:right;
+    }
+#heading
+{
+    font-weight:bold;
+    }

@@ -1,0 +1,415 @@
+    <html>
+        <head>
+            <title>
+                Simple Quiz Test    <!--title of the page  -->
+            </title>
+
+
+
+            <link rel="stylesheet" type"text/css" href="../CSS/QuizDesign.css" > <!-- linking the design css file of Quiz -->
+
+                <link rel="stylesheet" type="text/css" href="../CSS/MainCss.css"><!-- linking the main css file made by student 2 -->
+
+                <script type="text/javascript" src="../JS/QuizJs.js">
+
+                </script>
+            </head>
+
+            <body>
+
+
+         
+<ul class='nav'>
+  <li class='navul'><a href="../html/main.html">Home</a></li>
+  <li class='navul'><a href="../html/Stress.html">Stress</a></li>
+  <li class='navul'><a href="../html/excercise.html">Excercise</a></li>
+     <li class='navul'><a href="../html/HealthyFoods.html">Foods</a></li>
+     <li class='navul'><a href="../html/Quiz.html">Quiz</a></li>
+     <li class='navul'><a href="../html/cart.html">Cart</a></li>
+  <li class='navul' style="float:right"><a class="active" href="../html/AboutUs.html">About</a></li>
+</ul>
+    
+     <div class = "LargePage"  id="lg1">   <br>    
+        <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+           </div> 
+        
+
+    
+            <div id='pageContent'>
+
+
+                <table style="width:800px" align="center" margin-top="" id="questionTable"> <!-- this is the question table. All the questions are displayed in this table. -->
+                    <tr>
+                        <td>
+                            <div>
+                                <h1 id="quizHead">
+                                    QuiZ Test 
+                                </h1>
+                                <br>
+                                    <div id="description">Here is a simple quiz of some questions regarding the content about Health in our website.
+    Please try to answer them within the time and check how far you are familiar with them.</div>   <!-- small description abbout the quiz -->
+                                </div>
+
+                                <div  class="hidden" id="time">Time left = <span id="counter"/> <!-- This is the timer which was hidden already when launching -->
+                                </div>
+
+                            <br><br>
+                                <div id="startButton">
+
+                                    <button class="buttonstart" onclick="start()"><span>Start Quiz </span></button>
+                                    </div>
+
+
+                                <!-- Here is the start of the questions. Here every question has same html tags. Only the question and answers are changed.-->
+
+                            <!-- So comment for question 1 is same for other questions -->
+
+                         <div id = "Question1" class = "hidden"><!--All the questions are hidden at the startup. When clicking on the 'start quiz' , question 1 appears.
+                                                                            In other questions when clicking 'next question' button, current question hides and the next question will appear.-->
+
+                                        <form name = "Q1"  >    <!-- Every question has a form name. I have use this to get access to the radio buttons -->
+                                            <p class="question"> 1) Physical fitness experts identify two types of physical fitness which include: </p><!--question class is only for                                                                                                               css -->
+                                            <ul>
+                                                <input type = "radio" id = "q1" value = "1" name = "quiz" >	 Health-related and skill-related.<br/> <!-- -->
+                                                    <input type = "radio" id = "q1" value = "2" name = "quiz">  Aerobics-related and wellness-related.<br/>
+                                                        <input type = "radio" id = "q1" value = "3" name = "quiz">  Health-related and motor performance-related<br/>
+                                                <input type = "radio" id = "q1" value = "4" name = "quiz">  Skill-related and motor-performance-related<br/>
+                                                            </ul>
+                                                            </form>
+                                                            <button class="button" onclick="firstAnswer()"><span>NextQuestion </span></button> <!--Here span tag is used for getting the small animation in the button-->
+
+                                        <!-- there is a button at the bottom right corner of every question. Every time when the user clicks on the 'next question' button it calls a unique function which already created in the javascript-->
+
+                                                        </div> <!--End of one question -->
+
+
+                          <div  class = "hidden" id = "Question2">
+                                                            <form name = "Q2" >
+                                                                <p class="question"> 2) Fitness routines should not exceed ___ minutes.</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q2" value = "1" name = "quiz" >  4 to 6<br/>
+                                                                        <input type = "radio" id = "q2" value = "2" name = "quiz">  8 to 10<br/>
+                                                                            <input type = "radio" id = "q2" value = "3" name = "quiz">  10 to 12<br/>
+                                                                                <input type = "radio" id = "q2" value = "4" name = "quiz">  12 to 14
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="secondAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+                            <div  class = "hidden" id = "Question3">
+                                                            <form name = "Q3" >
+                                                                <p class="question"> 3) Which is least likely to lower your blood pressure?</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q3" value = "1" name = "quiz" >  Low-fat yogurt<br/>
+                                                                        <input type = "radio" id = "q3" value = "2" name = "quiz">  Whole-grain bread<br/>
+                                                                            <input type = "radio" id = "q3" value = "3" name = "quiz">  Broccoli<br/>
+                                                                                <input type = "radio" id = "q3" value = "4" name = "quiz">  Spinach
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="thirdAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+
+
+                              <div  class = "hidden" id = "Question4">
+                                                            <form name = "Q4" >
+                                                                <p class="question"> 4)___ means that some individuals receive more benefit from similar amounts of training than do others.</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q4" value = "1" name = "quiz" >  Trainability<br/>
+                                                                        <input type = "radio" id = "q4" value = "2" name = "quiz">  Physical fitness<br/>
+                                                                            <input type = "radio" id = "q4" value = "3" name = "quiz">  Endurance<br/>
+                                                                                <input type = "radio" id = "q4" value = "4" name = "quiz">  Overload
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="forthAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+
+                            <div  class = "hidden" id = "Question5">
+                                                            <form name = "Q5" >
+                                                                <p class="question"> 5) Meat eaters have a higher risk of all but one of these diseases. Which one?</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q5" value = "1" name = "quiz" >  Osteoarthritis<br/>
+                                                                        <input type = "radio" id = "q5" value = "2" name = "quiz">  Diabetes<br/>
+                                                                            <input type = "radio" id = "q5" value = "3" name = "quiz">  Colon cancer<br/>
+                                                                                <input type = "radio" id = "q5" value = "4" name = "quiz">  Non-Hodgkins lymphoma
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="fifthAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+
+
+
+
+                             <div  class = "hidden" id = "Question6">
+                                                            <form name = "Q6" >
+                                                                <p class="question"> 6) ____ can best be described as moving continuously while performing movement patterns that are organized by units of 4,8, or 16 counts.</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q6" value = "1" name = "quiz" >  Routine with Music<br/>
+                                                                        <input type = "radio" id = "q6" value = "2" name = "quiz">  Student Leader Routine<br/>
+                                                                            <input type = "radio" id = "q6" value = "3" name = "quiz">  Circuit Training Routine
+                                                                                <br/>
+                                                                                <input type = "radio" id = "q6" value = "4" name = "quiz">  Aerobic Fitness Routine
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="sixthAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+                              <div  class = "hidden" id = "Question7">
+                                                            <form name = "Q7" >
+                                                                <p class="question"> 7) Getting plenty of ________ is another way to ensure that the stressors in my life don't start feeling overwhelming.</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q7" value = "1" name = "quiz" >  Sunshine<br/>
+                                                                        <input type = "radio" id = "q7" value = "2" name = "quiz">  Both<br/>
+                                                                            <input type = "radio" id = "q7" value = "3" name = "quiz">  Neither<br/>
+                                                                                <input type = "radio" id = "q7" value = "4" name = "quiz">  Exercise
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="seventhAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+                              <div  class = "hidden" id = "Question8">
+                                                            <form name = "Q8" >
+                                                                <p class="question"> 8) Vitamin D may reduce the risk of all but one of these. Which one?</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q8" value = "1" name = "quiz" >  Bone loss<br/>
+                                                                        <input type = "radio" id = "q8" value = "2" name = "quiz">  Gum disease<br/>
+                                                                            <input type = "radio" id = "q8" value = "3" name = "quiz">  Irritable bowel syndrome<br/>
+                                                                                <input type = "radio" id = "q8" value = "4" name = "quiz">  Multiple sclerosis
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="eighthAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+
+                              <div  class = "hidden" id = "Question9">
+                                                            <form name = "Q9" >
+                                                                <p class="question"> 9)  A particular Asian inspired exercise is known to be effective in enhancing the participants relaxation level, it is called ____.</p>
+                                                                <ul>
+                                                                    <input type = "radio" id = "q9" value = "1" name = "quiz" >  Meiji<br/>
+                                                                        <input type = "radio" id = "q9" value = "2" name = "quiz">  Yoga<br/>
+                                                                            <input type = "radio" id = "q9" value = "3" name = "quiz">  Kagura<br/>
+                                                                                <input type = "radio" id = "q9" value = "4" name = "quiz">  Shinto
+                                                                                    <br/>
+                                                                                </ul>
+                                                                                </form>
+                                                                                <button class="button" onclick="ninethAnswer()" ><span>NextQuestion </span></button>
+                                                                            </div>
+
+
+
+
+                            <div class = "hidden" id = "Question10">
+                                                            <form name = "Q10" >
+                                                                 <p class="question"> 10) Which one of the following should be excluded when implementing fitness routines?</p>
+                                                                 <ul>
+                                                                         <input type = "radio" id = "q10" value = "1" name = "quiz" >  Two- to three-minute aerobic warm-up period<br/>
+                                                                                 <input type = "radio" id = "q10" value = "2" name = "quiz">  Cover the major components of fitness<br/>
+                                                                                          <input type = "radio" id = "q10" value = "3" name = "quiz">  Exercise all body parts<br/>
+                                                                                        <input type = "radio" id = "q10" value = "4" name = "quiz">  Limit circuit training segments to one-minute each<br/>
+                                                                            </ul>
+                                                                                 </form>
+                                                                                <button class="Submitbutton submit" onclick="TenthAnswer()">Submit</button>
+                                                                                                     </div>
+
+
+                                                                                                     </td>
+                                                                                                </tr>
+                                                                                            </table> <!-- End of the question table -->
+
+
+                                                                        <!--Here is the section for displaying the marks. I have used a div tag for this. This whole section is hidden at the start. This Appers when the user click the 'submit' button at the end of the question table
+                                                                                -->
+                                                                                                        <div class="hidden" id="MarksPage">
+                                                                                                        <h1 align="center">
+                                                                                                            <font color = "#0033ed">QuiZ Test </font><!-- topic of the page -->
+                                                                                                        </h1>
+                                                                                                        <h3 align="center">
+                                                                                                        <font color="red">Results</font></h3>
+                                                                                                            <div id="Results" style="text-align:center" ><font color = "#520256"> Text </font></div> <!--After submitting this 'Text' shows the final marks of the user-->
+
+                                                                                                            <div id="DurationText" style="text-align:200px"><font color = "#520256">Text</font></div><!--And this 'Text will show the duration which he took to finish it -->
+
+                                                                                                            <!-- creating of marks table-->
+                                                                                                        <table id='marksTable' style="width:75%" align="center" margin-top="0px" >
+
+
+                                                                                                        <!--This is the explanation for all markspage questions and answers.
+                                                                                                            -->
+                                                                                                          <tr>  <td>
+                                                                                                            <p class="question"> 1) Physical fitness experts identify two types of physical fitness which include:</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A11">Health-related and skill-related.</p>
+                                                                                                                <p id="A12">Aerobics-related and wellness-related.</p>
+                                                                                                                <p id="A13">Health-related and motor performance-related</p>
+                                                                                                                <p id="A14">Skill-related and motor-performance-related<br><br></p>
+                                                                                                            </ul></td> <!-- this shows the question and answers without radio buttons-->
+
+
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect1"><img src="../Raw/correct.png" height="160" width="160"></div>
+
+                                                                                                                <div class="hidden" id="ImageIDWrong1"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                                <!--These are two images which appears side of the related question  in accordance to wrong or correct status of that question-->
+                                                                                                            </td></tr>
+
+
+
+                                                                                                            <tr><td>
+                                                                                                                <p class="question"> 2) Fitness routines should not exceed ___ minutes.</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A21">4 to 6</p>
+                                                                                                                <p id="A22">8 to 10</p>
+                                                                                                                <p id="A23">10 to 12</p>
+                                                                                                                 <p id="A24">12 to 14<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect2"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong2"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+                                                                                                             <br>
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 3) Which is least likely to lower your blood pressure?</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A31">Low-fat yogurt</p>
+                                                                                                                <p id="A32">Whole-grain bread</p>
+                                                                                                                <p id="A33">Broccoli</p>
+                                                                                                                  <p id="A34">Spinach<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect3"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong3"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 4)___ means that some individuals receive more benefit from similar amounts of training than do others.</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A41">Trainability</p>
+                                                                                                                <p id="A42">Physical fitness</p>
+                                                                                                                <p id="A43">Endurance</p>
+                                                                                                                 <p id="A44">Overload<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect4"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong4"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 5) Meat eaters have a higher risk of all but one of these diseases. Which one?</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A51">Osteoarthritis</p>
+                                                                                                                <p id="A52">Diabetes</p>
+                                                                                                                <p id="A53">Colon cancer</p>
+                                                                                                                  <p id="A54">Non-Hodgkins lymphoma<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect5"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong5"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 6) ____ can best be described as moving continuously while performing movement patterns that are organized by units of 4,8, or 16 counts.</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A61">Routine with Music</p>
+                                                                                                                <p id="A62">Student Leader Routine</p>
+                                                                                                                <p id="A63">Circuit Training Routine</p>
+                                                                                                                 <p id="A64">Aerobic Fitness Routine<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect6"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong6"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 7) Getting plenty of ________ is another way to ensure that the stressors in my life don't start feeling overwhelming.</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A71">Sunshine</p>
+                                                                                                                <p id="A72">Both</p>
+                                                                                                                <p id="A73">Neither</p>
+                                                                                                                <p id="A74">Exercise<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect7"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong7"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 8) Vitamin D may reduce the risk of all but one of these. Which one?</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A81">Bone loss</p>
+                                                                                                                <p id="A82">Gum disease</p>
+                                                                                                                <p id="A83">Irritable bowel syndrome</p>
+                                                                                                                <p id="A84">Multiple sclerosis<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect8"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong8"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                             <tr><td>
+                                                                                                                <p class="question"> 9)  A particular Asian inspired exercise is known to be effective in enhancing the participants relaxation level, it is called ____.</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A91">Meiji</p>
+                                                                                                                <p id="A92">Yoga</p>
+                                                                                                                <p id="A93">Kagura</p>
+                                                                                                                <p id="A94">Shinto<br><br></p>
+                                                                                                            </ul></td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect9"><img src="../Raw/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong9"><img src="../Raw/wrong.png" height="150" width="150"></div>
+                                                                                                            </td></tr>
+
+
+
+                                                                                                            <tr><td>
+                                                                                                                <p class="question"> 10) Which one of the following should be excluded when implementing fitness routines?</p>
+                                                                                                            <ul>
+                                                                                                                <p id="A101">Two- to three-minute aerobic warm-up period</p>
+                                                                                                                <p id="A102">Cover the major components of fitness</p>
+                                                                                                                <p id="A103">Exercise all body parts</p>
+                                                                                                                <p id="A104">Limit circuit training segments to one-minute each<br><br></p>
+                                                                                                            </ul>
+                                                                                                            </td>
+                                                                                                            <td><div class="hidden" id="ImageIDCorrect10"><img src="../pic/correct.png" height="160" width="160"></div>
+                                                                                                                <div class="hidden" id="ImageIDWrong10"><img src="../pic/wrong.png" height="150" width="150" ></div>
+                                                                                                            </td>
+
+                                                                                                            </tr>
+                                                                                                            </table><!-- End of marks table-->
+
+                </div><!--end of division tag at the begining of the marks table-->
+
+    </div>
+    <footer>
+        <BR><BR><BR>
+            
+        <div class="dividerPage" id ="lgc">
+            <br>   
+    <a href='../Cvs/Cv%20Of%20SasinduSithara.html'> Author : Sasindu Sithara</a>
+             <h1 id ="about"> <center><img src='../pic/logo.png' height='150px'  width='450px'></center></h1>
+        </div>
+     
+        </footer>
+
+
+                                                                                        </body>
+                                                                                    </html>

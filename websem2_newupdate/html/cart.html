@@ -1,0 +1,181 @@
+        <!DOCTYPE html>
+        <html >
+        <head>
+          <title>VerDure Mall</title>
+              <script src="../js/cart.js"></script>
+              <link rel="stylesheet" href="../css/cart.css"> 
+        </head>
+
+        <body>
+
+         <ul>
+      <li><a href="../html/main.html">Home</a></li>
+      <li ><a href="../html/Stress.html">Stress</a></li>
+      <li ><a href="../html/excercise.html">Excercise</a></li>
+         <li><a href="../html/HealthyFoods.html">Foods</a></li>
+         <li><a href="../html/Quiz.html">Quiz</a></li>
+         <li><a href="../html/cart.html">Cart</a></li>
+      <li style="float:right"><a class="active" href="../html/AboutUs.html">About</a></li>
+    </ul>
+
+          <div class="content">
+                <div class="devideDIV">
+                    <span>VerDure Shopping Mall</span>
+                </div><br>
+              <button id="button3" onclick="window.location.href='#bottom'" >Go to Bottom</button><br><br>
+              <section id="top">
+        <div id="main_area1">               <!--This is the buttons which are used to adjust font sizes-->
+          <button id="button1" value="larger" type="button" onclick="changeFontSize(this)">Increase font size</button>
+          <button id="button2" vale="smaller" type="button" onclick="changeFontSize(this)">Decrease font size</button>
+        </div>
+                  </section>
+        <br><br>
+              <div id= "size"> 
+                <div class="cartMain">
+                    <table id="cartTable">
+
+                            <br><br>
+                        <thead>                      
+                            <tr>
+                                <th></th>
+                                <th>Item</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Amount($)</th>
+                            </tr>
+
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/treadmill.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">Gym Mate Elctronic Treadmill with incline</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in USA</a></span>
+                                </td>
+                                <td class="price">1280</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="countInput" value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">1280</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/mat.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">Yoga Rubber Mat</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in China</a></span>
+                                </td>
+                                <td class="price">170</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="count-input"  value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">170</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/watch1.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">BeatMa+ Heart Rate Checker and Smart Watch</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in Austria</a></span>
+                                </td>
+                                <td class="price">279</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="count-input"  value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">279</td>
+                            </tr>
+                            <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/bottle.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">Bounty Biotin 10,000mcg 120ct Supports Skin Health Energy</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in USA</a></span>
+                                </td>
+                                <td class="price">10</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="count-input"  value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">10</td>
+                            </tr>	
+                            <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/cosmic.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">Cosmic Health Training Device</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in Russia</a></span>
+                                </td>
+                                <td class="price">60</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="count-input"  value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">60</td>
+                                </tr>
+                                <tr>
+                                <td class="checkbox">
+                                    <input type="checkbox" class="checkOne"/>
+                                </td>
+                                <td class="goods">
+                                    <img src="../pic/vacum.jpg" alt=""/>
+                                    <span><a href="##" class="goodsTitle">Blackhead Vacuum Acne Cleaner</a></span><br/>
+                                    <span><a href="##" class="sellerTitle">Made in China</a></span>
+                                </td>
+                                <td class="price">20</td>
+                                <td class="count">
+                                    <span class="reduce">-</span>
+                                    <input type="text" class="count-input"  value="1"/>
+                                    <span class="add">+</span>
+                                </td>
+                                <td class="subtotal">20</td>
+                            </tr>	    	                        
+                        </tbody>
+                    </table>
+                </div>
+      <section id="bottom">
+                <div class="cartFooter" id="cartFooter">
+                    <div class="fr tag">Cart Details</div> 
+                    <div class="fr total">Total:$<span id="priceTotal">0.00</span></div>
+                    <div class="fr selected" id="selected">Selected Items
+                        <span id="selectedTotal">0</span>
+                    </div>
+                </div>
+                  </section>
+                  <form name="myForm" onsubmit="return validateForm();" method="post">
+                        Name : <input type="text" name="name">
+                        Email: <input type="text" name="email">
+                        <input type="submit" value="Submit">
+                  </form>
+            </div>
+              <br><br>
+
+              <button id="button3" onclick="window.location.href='#top'" >Go to Top</button>
+              </div>       
+                <footer>
+            <BR><BR><BR>           
+            <div class="dividerPage" id ="lgc">
+                <br>      
+                 <h1 id ="about"> <center><img src='../pic/logo.png' height='150px'  width='450px'></center></h1>
+            </div>    
+            </footer>
+        </body>
+        </html>

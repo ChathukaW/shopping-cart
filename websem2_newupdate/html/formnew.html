@@ -1,0 +1,343 @@
+<html>
+    
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="../css/form_style.css">
+      
+        <script src="form_scrpt.js"></script>
+        
+        
+           
+    </head>
+    
+    <body>
+        
+<ul>
+  <li><a href="../html/main.html">Home</a></li>
+  <li><a href="../html/Stress.html">Stress</a></li>
+  <li><a href="../html/excercise.html">Excercise</a></li>
+     <li><a href="../html/HealthyFoods.html">Foods</a></li>
+     <li><a href="../html/Quiz.html">Quiz</a></li>
+     <li><a href="../html/cart.html">Cart</a></li>
+  <li style="float:right"><a class="active" href="../html/AboutUs.html">About</a></li>
+</ul>   
+        
+        <div class="largePage" id ="lga">
+        </div>
+        
+        <style>
+            .popup-window {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            
+        }
+
+
+        .popup-window-content {
+            position: relative;
+            background-color: #ffffff;
+            margin: auto;
+            padding: 0;
+            border: 1px solid #888;
+            width: 80%;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+            -webkit-animation-name: animatetop;
+            -webkit-animation-duration: 0.4s;
+            animation-name: animatetop;
+            animation-duration: 0.4s
+        }
+
+
+        @-webkit-keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+        @keyframes animatetop {
+            from {top:-300px; opacity:0}
+            to {top:0; opacity:1}
+        }
+
+
+        .close {
+            color: white;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: red;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .popup-window-header {
+            padding: 2px 16px;
+            background-color: #a0c4ff;
+            color: white;
+        }
+
+        .popup-window-body {padding: 2px 16px;}
+
+        .popup-window-footer {
+            padding: 2px 3px;
+
+
+        }
+    </style>
+
+<body onload="document.registration.userid.focus();">
+<h2 align="center">We would like to hear from you!</h2>
+
+<form name='registration' onSubmit="return formValidation();">
+    
+<label for="username" align="center">Enter your name:     </label>
+        <input type="text" name="username" id="lname" placeholder="Enter your Name" size="50" if="username"/><br><br>
+    
+    <label for="email">Your email address here:</label>
+        <input type="text" name="email" id="email" placeholder="Email Address" size="50" id="email" /><br><br>
+
+               
+  <label for="rate">How would you rate us? :</label>
+        <select name="rate" id="rate">
+            <option selected="" value="Default">Select your rating here</option>
+            <option value="Impressed">Impressed</option>
+            <option value="Good">Good. Could use some work</option>
+            <option value="Not very satified">Not very satified</option>
+            <option value="Worst">Worst site ever!</option>
+
+        </select><br><br>
+        
+
+        <textarea name="desc" id="desc">Enter text here...</textarea><br><br>
+        <input type="submit" name="submit" value="Submit" />
+    
+</form>
+
+<div name="myModal" id="myModal" class="popup-window">
+
+
+    <div class="popup-window-content">
+        <div class="popup-window-header">
+            <span class="close">&times;</span>
+            <h2>User's Feedback</h2>
+        </div>
+        <div class="popup-window-body" id="popup-window-body1">
+            <p id="username">
+
+            </p>
+            <p id="emailadd">
+
+            </p>
+
+            <p id="rrate">
+
+            </p>
+
+            <p id="des">
+
+            </p>
+
+        </div>
+        <div class="popup-window-footer">
+
+            <button id="ok">OK</button>
+            <button id="cancel">Cancel</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div id="thankyou" class="popup-window">
+
+
+    <div class="popup-window-content">
+        <div class="popup-window-header">
+            <span class="close">&times;</span>
+            <h2>Feedback Recieved</h2>
+        </div>
+        <div class="popup-window-body">
+            <p>Thank you for your valueble time.</p>
+        </div>
+        <div class="popup-window-footer">
+
+            <button id="ok1">OK</button>
+        </div>
+    </div>
+
+</div>
+
+
+
+<script>
+	
+    var username=document.getElementById("username");
+    var emalladd=document.getElementById("emailadd");
+    var descrip=document.getElementById("des");
+    var rrate=document.getElementById("rrate");
+
+    var modal = document.getElementById('myModal');
+    var thanyou = document.getElementById('thankyou');
+
+    var btncancel = document.getElementById("cancel");
+    var btnok = document.getElementById("ok");
+
+
+
+    var btnok1 = document.getElementById("ok1");
+
+    var span = document.getElementsByClassName("close")[0];
+
+
+    btncancel.onclick = function() {
+        modal.style.display = "none";
+    }
+    btnok1.onclick = function() {
+        document.getElementById('thankyou').style.display = "none";
+
+    }
+
+
+    btnok.onclick = function() {
+
+        document.getElementById('thankyou').style.display = "block";
+        modal.style.display = "none";
+        clear();
+    }
+
+
+    function message() {
+        document.getElementById('myModal').style.display = "block";
+
+    }
+
+
+    span.onclick = function() {
+        modal.style.display = "none";
+        thankyou.style.display = "none";
+    }
+
+
+    window.onclick = function(event) {
+
+        if (event.target == thankyou) {
+            thankyou.style.display = "none";
+        }
+    }
+
+    function formValidation()
+    {
+
+        var uname = document.registration.username;
+
+        var urate = document.registration.rate;
+
+        var uemail = document.registration.email;
+        var dec = document.registration.desc;
+        var userrating="";
+
+
+
+        if(allLetter(uname))
+        {
+            if(ValidateEmail(uemail))
+            {
+                if(ratevalue(urate))
+                {
+                    confirm("User name: " +uname.value+ "\n Email: "+uemail.value+"\n Rating "+urate.value);
+
+
+                    message();
+                    username.innerHTML="User name: " +uname.value;
+                    emalladd.innerHTML="Email address: " +uemail.value;
+                    descrip.innerHTML="Comment: "+dec.value;
+                    rrate.innerHTML="User rating: "+urate.value;
+
+                }
+            }
+        }
+
+
+
+        return false;
+
+    }
+    function allLetter(uname)
+    {
+        var letters = /^[A-Za-z]+$/;
+        if(uname.value.match(letters))
+        {
+            return true;
+        }
+        else
+        {
+            alert('Username can only contain alphabet characters');
+            uname.focus();
+            return false;
+        }
+    }
+
+
+
+    function ratevalue(urate)
+    {
+        if(urate.value == "Default")
+        {
+            alert('Please select your rating');
+            urate.focus();
+            return false;
+        }
+        else
+        {
+            return true;
+
+        }
+    }
+
+
+    function ValidateEmail(uemail)
+    {
+        var emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        if(uemail.value.match(emailformat))
+        {
+            return true;
+        }
+        else
+        {
+            alert("Please enter a valid email address!");
+            uemail.focus();
+            return false;
+        }
+    }
+
+    function clear(){
+        document.registration.username.value="";
+        document.registration.email.value=""
+        document.registration.desc.value=""
+        document.registration.rate.value="Default"
+    }
+
+</script>
+
+        <div class="dividerPage" id ="lgc">
+            <br>
+             <h1 id ="about"> <center>  </center></h1>
+            
+        </div>
+        
+        
+    </body>
+
+</html>
